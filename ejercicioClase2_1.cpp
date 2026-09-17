@@ -11,7 +11,7 @@ int suma(int d1, int d2){
 
 /*
  * main
- */
+
 
 #include <cstdlib>
 #include <iostream>
@@ -28,3 +28,4 @@ int main(int narg, char *arg[]){
 	std::cout<<"suma "<<d1<<" y "<<d2<<" = "<<suma(d1,d2)<<std::endl;
 	return 0;
 }
+*/
