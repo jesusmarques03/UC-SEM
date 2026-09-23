@@ -5,8 +5,30 @@
  *      Author: JESUS MARQUES
  */
 
+#include <iostream>
+
+// TEST 1
 int suma(int d1, int d2){
+	std::cout << "suma(int,int): " << d1 << " + " << d2 << std::endl;
 	return d1+d2;
+}
+
+// TEST 2
+int suma(){
+	std::cout << "suma(): 1 + 2" << std::endl;
+	return 1+2;
+}
+
+// TEST 3
+int suma(int a){
+	std::cout << "suma(int): " << a << " + 2" << std::endl;
+	return a+2;
+}
+
+// TEST 4
+int suma(float a, float b){
+	std::cout << "suma(float,float): " << a << " + " << b << std::endl;
+	return a+b;
 }
 
 /*
