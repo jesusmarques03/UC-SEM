@@ -8,6 +8,13 @@
 #include "Base.h"
 #include <iostream>
 
+int Base::comun = 0;
+
+int Base::global() {
+	comun++;
+	return comun;
+}
+
 Base::Base() {
 	std::cout << "En constructor Base::Base()" << std::endl;
 	a = 0;
@@ -27,4 +34,8 @@ Base::Base(const Base &other) {
 void Base::get(int &va, int &vb) {
 	va = a;
 	vb = b;
+}
+
+int Base::suma() {
+	return a+b;
 }

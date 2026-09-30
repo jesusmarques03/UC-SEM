@@ -18,3 +18,7 @@ Derivada::~Derivada() {
 	std::cout << "En destructor Derivada::~Derivada()" << std::endl;
 }
 
+int Derivada::suma(){
+	return a+b+100;
+}
+

@@ -15,7 +15,10 @@ protected:
 	int a;
 	int b;
 public:
+	static int comun;
+	int global();
 	void get(int &va, int &vb);
+	virtual int suma();
 	Base();
 	virtual ~Base();
 	Base(const Base &other);

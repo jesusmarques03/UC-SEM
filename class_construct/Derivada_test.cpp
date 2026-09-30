@@ -20,4 +20,19 @@ TEST(Derivada, constructor) {
 	ASSERT_EQ(vb,33);
 }
 
+TEST(Derivada, poli) {
+	Base d1(3);
 
+	ASSERT_EQ(d1.suma(), 3);
+
+	Derivada d2(3, 4);
+	ASSERT_EQ(d2.suma(), 107);
+
+	Base *p;
+	p = &d2;
+	ASSERT_EQ(p->suma(), 107);
+
+	ASSERT_EQ(p->global(), 1);
+	ASSERT_EQ(d1.global(), 2);
+	ASSERT_EQ(d2.global(), 3);
+}
