@@ -65,6 +65,15 @@ template <typename T> bool Complex<T>::operator!=(const Complex<T>& c) {
 template <typename T> Complex<T> Complex<T>::operator=(const Complex<T>& c) {
 	if(this != &c) {	// Caso patologico de autoasignacion		real = c.real;		imag = c.imag;	}	return *this;}
 
+// OPERADOR DIVISOR HECHO EN CLASE
+template <typename T> Complex<T> Complex<T>::operator/(const Complex<T>& c) {
+	Complex<T> result; // (a,b)/(c,d) = ((a*c+b*d)/(c*c+d*d),(b*c-a*d)/(c*c+d*d))
+	T denominador = c.real * c.real + c.imag *c.imag;
+	result.real = (real * c.real + imag * c.imag) / denominador;
+	result.real = (imag * c.real - real * c.imag) / denominador;
+	return result;
+}
+
 // Metodos de acceso: Get real
 template <typename T> T  Complex<T>::getReal()  {
 	return real;

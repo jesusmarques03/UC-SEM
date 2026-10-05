@@ -114,4 +114,21 @@ TEST(ComplexTest, List) {
 	c1.printList();
 }
 
+TEST(ComplexTest, division) {
+	Complex<float> c1(2,2);
+	Complex<float> c2(1,1);
 
+	Complex<float> c3;
+	c3 = c1 / c2;
+
+	ASSERT_EQ(c3.getReal(), 2.0f);
+
+	Complex<float> c4;
+	try {
+		c3 = c2 / c4;
+		c3.print();
+	} catch (const std::exception& e) {
+		std::cout << "Error" << e.what() << std::endl;
+	}
+
+}

@@ -27,6 +27,7 @@ public:
 	bool operator==(const Complex<T>& c);
 	bool operator!=(const Complex<T>& c);
 	Complex<T> operator=(const Complex<T>& c);
+	Complex<T> operator/(const Complex<T>& c);
 
 	// Metodos de acceso
 	T getReal();
