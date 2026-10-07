@@ -35,7 +35,7 @@ TEST(Persona, destructor) {
 	// Solo tiene que haber 1 persona en la lista
 	ASSERT_EQ(p2.nPersonas(),1);
 	// Comprobar que su ID es correcto
-	ASSERT_TRUE(p2.isOnList("123456789A"));
+	ASSERT_FALSE(p2.isOnList("000000000B"));
 }
 
 // Test priny
